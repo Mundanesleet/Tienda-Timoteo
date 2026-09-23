@@ -1,0 +1,24 @@
+/* ==========================================================================
+   Animaciones — sutiles y desactivadas con prefers-reduced-motion
+   ========================================================================== */
+
+body { animation: page-in 420ms var(--ease) both; }
+body.is-leaving { opacity: 0; transition: opacity 160ms var(--ease); }
+@keyframes page-in { from { opacity: 0; } to { opacity: 1; } }
+
+/* Reveal al hacer scroll (se activa desde app.js) */
+.js [data-reveal] { opacity: 0; transform: translateY(18px); transition: opacity 600ms var(--ease), transform 600ms var(--ease); transition-delay: var(--reveal-delay, 0ms); }
+.js [data-reveal].is-visible { opacity: 1; transform: none; }
+
+/* Corazón de favoritos */
+.fav-btn.is-popping svg { animation: heart-pop 420ms var(--ease); }
+@keyframes heart-pop { 0% { transform: scale(1); } 40% { transform: scale(1.35); } 100% { transform: scale(1); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .js [data-reveal] { opacity: 1; transform: none; }
+  body.is-leaving { opacity: 1; }
+  .animate-spin-slow { animation: none; }
+  /* sellos giratorios y puntos pulsantes de las pantallas nuevas */
+  .nv-hero__seal svg, .ns-hero__stamp, .ca-seal svg, .ck-seal svg, .oc-hero__stamp svg,
+  .nv-pill__dot, .ct-wa__live i, .oc-pill i::before, .oc-steps .is-active b { animation: none; }
+}

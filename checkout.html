@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Finalizar tu pedido | Timoteo</title>
+  <meta name="description" content="Completa los datos de envío, escribe tu dedicatoria y paga de forma segura en Timoteo.">
+  <meta name="theme-color" content="#FFF8F6">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages-cart.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="checkout" data-chrome="appbar" data-nav="home">
+  <a class="skip-link" href="#main-content">Saltar al contenido</a>
+  <header id="site-header"></header>
+
+  <main id="main-content" class="ck-page">
+
+    <section class="ck-steps">
+      <div class="ck-steps__row">
+        <div class="ck-steps__left">
+          <a href="carrito.html"><i class="bi bi-arrow-left"></i><span>Volver a la canasta</span></a>
+          <i class="ck-steps__dot" aria-hidden="true">•</i>
+          <span class="ck-steps__tag">Detalles que dejan huella ♡</span>
+        </div>
+        <nav class="ck-steps__nav" aria-label="Progreso del pedido">
+          <div class="is-done"><b><i class="bi bi-check-lg"></i></b><span>1. Carrito</span></div>
+          <i class="bi bi-chevron-right" aria-hidden="true"></i>
+          <div class="is-current" aria-current="step"><b>2</b><span>2. Envío &amp; Dedicatoria</span></div>
+          <i class="bi bi-chevron-right" aria-hidden="true"></i>
+          <div class="is-next"><b>3</b><span>3. Pago Seguro</span></div>
+        </nav>
+      </div>
+    </section>
+
+    <section class="ck-main" id="ck-main">
+      <div class="ck-grid">
+
+        <form class="ck-form" id="checkoutForm" novalidate>
+          <div class="ck-intro">
+            <span class="ca-eyebrow">Cuidado artesanal garantizado</span>
+            <h1>Finalizar tu sorpresa</h1>
+            <p>Cuidamos cada detalle desde el lazo hasta el momento exacto en que tocan el timbre.</p>
+          </div>
+
+          <!-- 1. Remitente -->
+          <div class="ck-block">
+            <div class="ck-block__head">
+              <div><span class="ck-num">1</span><div><h2>¿Quién envía el detalle?</h2><p>Para enviarte las confirmaciones y estado en vivo.</p></div></div>
+              <i class="bi bi-heart" aria-hidden="true"></i>
+            </div>
+            <div class="ck-fields">
+              <div class="ck-field ck-field--full">
+                <label for="senderName">Nombre y Apellido completo *</label>
+                <input id="senderName" name="senderName" type="text" placeholder="Ej. Camila Valenzuela" autocomplete="name" required>
+                <em class="ck-err" data-err="senderName"></em>
+              </div>
+              <div class="ck-field">
+                <label for="senderEmail">Correo Electrónico *</label>
+                <input id="senderEmail" name="senderEmail" type="email" placeholder="tu.correo@ejemplo.com" autocomplete="email" required>
+                <em class="ck-err" data-err="senderEmail"></em>
+              </div>
+              <div class="ck-field">
+                <label for="senderPhone">Teléfono / WhatsApp *</label>
+                <input id="senderPhone" name="senderPhone" type="tel" placeholder="+57 300 123 4567" autocomplete="tel" required>
+                <em class="ck-err" data-err="senderPhone"></em>
+              </div>
+            </div>
+            <div class="ck-check">
+              <input id="photoProof" name="photoProof" type="checkbox" checked>
+              <label for="photoProof">
+                <p>Envío de fotografía previo al despacho (Gratis)</p>
+                <span>Te enviaremos una foto de alta resolución del arreglo floral y empaque por WhatsApp antes de que salga del taller.</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- 2. Destinatario y entrega -->
+          <div class="ck-block">
+            <div class="ck-block__head">
+              <div><span class="ck-num">2</span><div><h2>¿Quién recibe la sorpresa?</h2><p>Llevamos la emoción directamente a sus manos.</p></div></div>
+              <i class="bi bi-truck" aria-hidden="true"></i>
+            </div>
+            <div class="ck-fields">
+              <div class="ck-field">
+                <label for="recipientName">Nombre del Destinatario *</label>
+                <input id="recipientName" name="recipientName" type="text" placeholder="Ej. Valentina Morales" required>
+                <em class="ck-err" data-err="recipientName"></em>
+              </div>
+              <div class="ck-field">
+                <label for="recipientPhone">Teléfono de contacto del Destinatario *</label>
+                <input id="recipientPhone" name="recipientPhone" type="tel" placeholder="Solo por si no contesta el timbre" required>
+                <em class="ck-err" data-err="recipientPhone"></em>
+              </div>
+              <div class="ck-field ck-field--full">
+                <label for="streetAddress">Dirección exacta de entrega *</label>
+                <input id="streetAddress" name="streetAddress" type="text" placeholder="Calle, Avenida, Número y Nombre del edificio" autocomplete="street-address" required>
+                <em class="ck-err" data-err="streetAddress"></em>
+              </div>
+              <div class="ck-field">
+                <label for="apartment">Depto / Casa / Oficina (Opcional)</label>
+                <input id="apartment" name="apartment" type="text" placeholder="Piso 4, Depto 402">
+              </div>
+              <div class="ck-field">
+                <label for="cityArea">Barrio / Ciudad *</label>
+                <select id="cityArea" name="cityArea">
+                  <option value="El Poblado (Despacho Express)" selected>El Poblado (Despacho Express)</option>
+                  <option value="Laureles (Despacho Express)">Laureles (Despacho Express)</option>
+                  <option value="Envigado (Despacho Express)">Envigado (Despacho Express)</option>
+                  <option value="Belén">Belén</option>
+                  <option value="Medellín Centro">Medellín Centro</option>
+                  <option value="Sabaneta">Sabaneta</option>
+                </select>
+              </div>
+              <div class="ck-field ck-field--full">
+                <label for="deliveryNotes">Indicaciones especiales para conserjería o repartidor</label>
+                <input id="deliveryNotes" name="deliveryNotes" type="text" placeholder="Dejar en recepción si no está, anunciar como regalo sorpresa...">
+              </div>
+            </div>
+            <div class="ck-when">
+              <div>
+                <i class="bi bi-calendar-event"></i>
+                <div>
+                  <p>Ventana de entrega programada</p>
+                  <b id="ck-when">Mañana, 24 de Octubre • 09:00 - 13:00 hrs</b>
+                </div>
+              </div>
+              <a href="carrito.html#entrega">Modificar fecha</a>
+            </div>
+          </div>
+
+          <!-- 3. Dedicatoria -->
+          <div class="ck-block">
+            <div class="ck-block__head">
+              <div><span class="ck-num">3</span><div><h2>Tu Mensaje &amp; Dedicatoria Especial</h2><p>Impreso en tarjeta de lino italiano blanco con sello de lacre burdeos artesanal.</p></div></div>
+              <i class="bi bi-pencil-square" aria-hidden="true"></i>
+            </div>
+            <div class="ck-card">
+              <div class="ck-card__top">
+                <div><span>Tarjeta Timoteo N° 108</span><i>Lacre artesanal incluido</i></div>
+                <small id="charCounter">0 / 280 caracteres</small>
+              </div>
+              <label class="visually-hidden" for="dedicationText">Dedicatoria</label>
+              <textarea id="dedicationText" name="dedication" rows="4" maxlength="280" placeholder="Escribe aquí las palabras que tocarán su corazón. Ejemplo: 'Gracias por iluminar mis días con tu sonrisa. ¡Feliz aniversario, mi amor! ♡'"></textarea>
+              <div class="ck-card__foot">
+                <div>
+                  <label><input type="radio" name="signatureType" value="public" checked><span>Firmar con mi nombre</span></label>
+                  <label><input type="radio" name="signatureType" value="anonymous"><span>Enviar como admirador/a secreto ♡</span></label>
+                </div>
+                <button type="button" id="inspireBtn"><i class="bi bi-stars"></i>Inspirarme con una frase</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Pago -->
+          <div class="ck-block">
+            <div class="ck-block__head">
+              <div><span class="ck-num">4</span><div><h2>Método de Pago Seguro</h2><p>Transacción encriptada con certificación SSL de 256 bits.</p></div></div>
+              <i class="bi bi-shield-check" aria-hidden="true"></i>
+            </div>
+            <div class="ck-pay" id="paymentOptions">
+              <label class="is-active">
+                <div><input type="radio" name="paymentMethod" value="card" checked><i class="bi bi-credit-card"></i></div>
+                <b>Tarjetas Bancarias</b><span>Crédito, Débito &amp; Prepago</span>
+              </label>
+              <label>
+                <div><input type="radio" name="paymentMethod" value="transfer"><em>5% OFF</em></div>
+                <b>Transferencia</b><span>Aprobación instantánea</span>
+              </label>
+              <label>
+                <div><input type="radio" name="paymentMethod" value="installments"><i class="bi bi-cash-coin"></i></div>
+                <b>Cuotas sin Interés</b><span>Hasta 6 cuotas con tu banco</span>
+              </label>
+            </div>
+            <div class="ck-cardbox" id="cardFields">
+              <div class="ck-field">
+                <label for="cardNumber">Número de Tarjeta</label>
+                <div class="ck-field__lock">
+                  <input id="cardNumber" name="cardNumber" type="text" inputmode="numeric" autocomplete="cc-number" placeholder="4532 •••• •••• 8921">
+                  <i class="bi bi-lock"></i>
+                </div>
+                <em class="ck-err" data-err="cardNumber"></em>
+              </div>
+              <div class="ck-cardbox__two">
+                <div class="ck-field">
+                  <label for="cardExp">Vencimiento (MM/AA)</label>
+                  <input id="cardExp" name="cardExp" type="text" inputmode="numeric" autocomplete="cc-exp" placeholder="08 / 28">
+                  <em class="ck-err" data-err="cardExp"></em>
+                </div>
+                <div class="ck-field">
+                  <label for="cardCvv">CVV / CVC</label>
+                  <input id="cardCvv" name="cardCvv" type="password" inputmode="numeric" autocomplete="cc-csc" maxlength="4" placeholder="123">
+                  <em class="ck-err" data-err="cardCvv"></em>
+                </div>
+              </div>
+              <div class="ck-field ck-cardbox__quotas" id="quotasField" hidden>
+                <label for="quotas">Número de cuotas</label>
+                <select id="quotas" name="quotas">
+                  <option value="2">2 cuotas sin interés</option>
+                  <option value="3">3 cuotas sin interés</option>
+                  <option value="6" selected>6 cuotas sin interés</option>
+                </select>
+              </div>
+            </div>
+            <div class="ck-transfer" id="transferInfo" hidden>
+              <i class="bi bi-bank"></i>
+              <p>Al confirmar te mostraremos los datos de la cuenta para transferir. Tu pedido se programa en cuanto recibamos el comprobante y aplicamos un <strong>5% de descuento</strong> sobre los productos.</p>
+            </div>
+          </div>
+        </form>
+
+        <aside class="ck-aside">
+          <div class="ck-sum" id="ck-sum"></div>
+          <div class="ck-help">
+            <div class="ck-help__who">
+              <img src="assets/images/editorial/florista-mostrador.jpg" alt="Sofía, asesora de Timoteo" loading="lazy">
+              <span aria-hidden="true"></span>
+            </div>
+            <div>
+              <p>¿Tienes alguna duda con tu entrega?</p>
+              <small>Sofía de Timoteo está online para ayudarte por WhatsApp.</small>
+            </div>
+            <a href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer" aria-label="Hablar con asesor"><i class="bi bi-chat-left-text"></i></a>
+          </div>
+          <div class="ck-seal" aria-hidden="true">
+            <div>
+              <svg viewBox="0 0 100 100"><path id="ckSealPath" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none"/><text><textPath href="#ckSealPath" startOffset="0%">• MÁS QUE REGALOS • ES EMOCIÓN •</textPath></text></svg>
+              <i class="bi bi-heart"></i>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="ca-empty" id="ck-empty" hidden>
+      <div class="ca-empty__card">
+        <span class="ca-empty__ico"><i class="bi bi-bag-heart"></i></span>
+        <span class="ca-eyebrow">No hay nada que pagar todavía</span>
+        <h2>Tu cesta está vacía</h2>
+        <p>Elige tus detalles favoritos y vuelve para finalizar tu sorpresa.</p>
+        <div>
+          <a class="ca-empty__main" href="catalogo.html">Explorar la tienda</a>
+          <a class="ca-empty__alt" href="carrito.html">Volver a la cesta</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ayudante de inspiración -->
+    <div class="ck-inspire" id="inspirationToast" role="dialog" aria-label="Inspiración Timoteo" aria-hidden="true">
+      <div>
+        <div>
+          <span>Inspiración Timoteo</span>
+          <p id="inspirationQuote">“Eres mi casualidad más linda y mi motivo favorito de sonreír.”</p>
+        </div>
+        <button type="button" id="inspirationClose" aria-label="Cerrar"><i class="bi bi-x-lg"></i></button>
+      </div>
+      <div class="ck-inspire__foot">
+        <button type="button" id="inspirationNext">Otra frase</button>
+        <button type="button" id="inspirationUse">Usar en dedicatoria</button>
+      </div>
+    </div>
+
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+  <div id="bottom-nav"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/components/icons.js"></script>
+  <script src="js/data/products.js"></script>
+  <script src="js/data/categories.js"></script>
+  <script src="js/services/productService.js"></script>
+  <script src="js/services/categoryService.js"></script>
+  <script src="js/services/cartService.js"></script>
+  <script src="js/services/orderService.js"></script>
+  <script src="js/services/favoritesService.js"></script>
+  <script src="js/components/productCard.js"></script>
+  <script src="js/components/categoryCard.js"></script>
+  <script src="js/components/toast.js"></script>
+  <script src="js/components/cartBadge.js"></script>
+  <script src="js/components/navbar.js"></script>
+  <script src="js/components/mobileNavigation.js"></script>
+  <script src="js/components/footer.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/pages/checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Novedades y ediciones de temporada | Timoteo</title>
+  <meta name="description" content="Lo nuevo en el atelier de Timoteo: bouquets de autor, la Caja Memoria, peluches y accesorios en ediciones de temporada.">
+  <meta name="theme-color" content="#FFF8F6">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages-atelier.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="novedades" data-chrome="atelier" data-nav="novedades">
+  <a class="skip-link" href="#main-content">Saltar al contenido</a>
+  <header id="site-header"></header>
+
+  <main id="main-content" class="nv-page">
+
+    <!-- Hero editorial -->
+    <section class="nv-hero">
+      <div class="container-atelier nv-hero__wrap">
+        <div class="nv-hero__grid">
+          <div class="nv-hero__copy">
+            <div class="nv-pill"><span class="nv-pill__dot"></span><span>Colección Otoño • Amor Atemporal 2025</span></div>
+            <h1>Lo Nuevo en el <span>Atelier</span></h1>
+            <p>Descubre nuestra más reciente curaduría floral de autor, cajas de regalo con acabados en terciopelo empolvado, y ositos artesanales creados en pequeñas tandas. Detalles pensados para detener el tiempo y expresar lo inefable.</p>
+            <div class="nv-hero__cta">
+              <a class="nv-hero__main" href="#catalogo-novedades"><span>Explorar lanzamientos</span><i class="bi bi-arrow-down"></i></a>
+              <a class="nv-hero__link" href="#lookbook-atelier"><i class="bi bi-play-circle"></i><span>Ver el proceso artesanal</span></a>
+            </div>
+            <div class="nv-stats">
+              <div><b>18</b><span>Nuevas piezas</span></div>
+              <i class="nv-stats__sep"></i>
+              <div><b>100%</b><span>Flores frescas</span></div>
+              <i class="nv-stats__sep"></i>
+              <div><b>Lote Nº 04</b><span>Edición de autor</span></div>
+            </div>
+          </div>
+
+          <div class="nv-hero__visual">
+            <div class="nv-hero__frame">
+              <div class="nv-hero__photo">
+                <img src="assets/images/editorial/hero-novedades.jpg" alt="Arreglo de rosas en caja de terciopelo borgoña junto a un osito de peluche y una caja de bombones Timoteo">
+                <div class="nv-hero__shade"></div>
+                <div class="nv-hero__quote">
+                  <span>Edición Limitada Otoño</span>
+                  <p>“La belleza de lo que se entrega con el alma”</p>
+                </div>
+              </div>
+              <div class="nv-hero__polaroid">
+                <div><img src="assets/images/editorial/ranunculus.jpg" alt="Manos de florista arreglando ranúnculos rosados y eucalipto"></div>
+                <p>Recién llegados al taller ♥</p>
+              </div>
+              <div class="nv-hero__seal" aria-hidden="true">
+                <div>
+                  <svg viewBox="0 0 100 100">
+                    <path id="nvSealPath" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none"/>
+                    <text><textPath href="#nvSealPath" startOffset="0%">• NOVEDADES • TIMOTEO ATELIER 2025 •</textPath></text>
+                  </svg>
+                  <span><i class="bi bi-flower1"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filtros de lanzamientos -->
+    <section class="nv-filters">
+      <div class="nv-filters__card">
+        <div class="nv-filters__row" id="nv-filters" role="tablist" aria-label="Filtrar lanzamientos">
+          <button type="button" class="nv-fchip is-active" data-filter="todos" aria-pressed="true"><i class="bi bi-stars"></i><span>Todos los lanzamientos</span></button>
+          <button type="button" class="nv-fchip" data-filter="bouquets" aria-pressed="false"><i class="bi bi-flower2"></i><span>Bouquets de Autor</span></button>
+          <button type="button" class="nv-fchip" data-filter="cajas" aria-pressed="false"><i class="bi bi-gift"></i><span>Cajas de Regalo</span></button>
+          <button type="button" class="nv-fchip" data-filter="peluches" aria-pressed="false"><i data-icon="paw" class="nv-fchip__svg"></i><span>Peluches &amp; Ternura</span></button>
+          <button type="button" class="nv-fchip" data-filter="chocolates" aria-pressed="false"><i class="bi bi-cookie"></i><span>Chocolatería Fina</span></button>
+          <button type="button" class="nv-fchip" data-filter="accesorios" aria-pressed="false"><i class="bi bi-watch"></i><span>Accesorios de Autor</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bouquets de autor -->
+    <section class="nv-sec nv-sec--bouquets" id="catalogo-novedades" data-block="bouquets">
+      <div class="nv-sec__head">
+        <div>
+          <span class="nv-eyebrow">Corte Fresco del Día</span>
+          <h2>Nuevos Bouquets de Autor</h2>
+        </div>
+        <p>Composiciones botánicas creadas a mano con flores seleccionadas de productores locales y follaje silvestre.</p>
+      </div>
+      <ul class="nv-grid nv-grid--3" id="nv-bouquets" role="list"></ul>
+    </section>
+
+    <!-- La Caja Memoria -->
+    <section class="nv-cap" data-block="cajas">
+      <div class="nv-cap__card">
+        <div class="nv-cap__glow" aria-hidden="true"></div>
+        <div class="nv-cap__grid">
+          <div class="nv-cap__visual">
+            <div class="nv-cap__photo">
+              <img src="assets/images/editorial/caja-memoria.jpg" alt="Caja de regalo burdeos abierta con bombones, arreglo preservado y carta lacrada">
+              <div class="nv-cap__tag">Sólo 50 Unidades</div>
+              <div class="nv-cap__wax">
+                <div><i class="bi bi-patch-check"></i><span>Sello en Cera de Autor</span></div>
+                <p>Caligrafiado a mano con las iniciales de quien recibe.</p>
+              </div>
+            </div>
+          </div>
+          <div class="nv-cap__copy">
+            <div class="nv-cap__pill"><i class="bi bi-stars"></i><span>Cápsula de Temporada • N° 01</span></div>
+            <h2>La Caja Memoria: <br><span>Un Homenaje al Detalle</span></h2>
+            <p>Diseñada especialmente para ocasiones que demandan algo irrepetible. Cada caja está forrada en tela aterciopelada, contiene bombones de maracuyá y pistacho, un arreglo preservado que dura más de un año y una carta sellada a fuego.</p>
+            <ul role="list">
+              <li><i class="bi bi-check-circle"></i><span>Bouquet de rosas preservadas (duración mínima 12 meses)</span></li>
+              <li><i class="bi bi-check-circle"></i><span>Caja rígida con cinta de seda italiana y broche artesanal</span></li>
+              <li><i class="bi bi-check-circle"></i><span>Mensaje con tipografía de máquina vintage o caligrafía libre</span></li>
+            </ul>
+            <div class="nv-cap__buy">
+              <div><span>Edición numerada</span><b id="nv-cap-price">$ 189.000</b></div>
+              <button type="button" class="nv-cap__btn" data-add-to-cart data-product-id="34"><i class="bi bi-cart-check"></i><span data-add-label>Reservar mi caja</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Peluches y accesorios -->
+    <section class="nv-sec nv-sec--acc" data-block="accesorios">
+      <div class="nv-sec__head">
+        <div>
+          <span class="nv-eyebrow">Coleccionables &amp; Recuerdos</span>
+          <h2>Nuevos Peluches &amp; Accesorios</h2>
+        </div>
+        <a class="nv-sec__link" href="catalogo.html"><span>Ver catálogo completo de complementos</span><i class="bi bi-arrow-right"></i></a>
+      </div>
+      <ul class="nv-grid nv-grid--4" id="nv-acc" role="list"></ul>
+    </section>
+
+    <!-- Lookbook -->
+    <section class="nv-look" id="lookbook-atelier">
+      <div class="container-atelier">
+        <div class="nv-look__head">
+          <span class="nv-eyebrow nv-eyebrow--primary">Manos que Transforman Sentimientos</span>
+          <h2>El Arte Detrás de Cada Entrega</h2>
+          <p>Cada lazo anudado, cada pétalo recortado y cada sobre perfumado es el resultado de un compromiso íntimo con la belleza y la emoción sincera.</p>
+        </div>
+        <div class="nv-look__grid">
+          <div class="nv-look__big">
+            <img src="assets/images/editorial/lazo-seda.jpg" alt="Manos de artesana atando una cinta de seda rosa sobre una caja de regalo con eucalipto y sello de cera" loading="lazy">
+            <div>
+              <span>Paso 01 • Selección</span>
+              <h3>Cintas de Seda Italiana</h3>
+              <p>Tejidas al telar con caída fluida que hace del desempacado una ceremonia.</p>
+            </div>
+          </div>
+          <div class="nv-look__col">
+            <div class="nv-look__small">
+              <img src="assets/images/editorial/flatlay-rosas.jpg" alt="Mesa de trabajo de florista con rosas rojas, tijeras de latón y cintas" loading="lazy">
+              <span>Mesas de Trabajo en el Taller</span>
+            </div>
+            <div class="nv-look__small">
+              <img src="assets/images/editorial/caligrafia.jpg" alt="Calígrafa escribiendo una nota de amor con pluma estilográfica" loading="lazy">
+              <span>Caligrafía de Autor a Mano Alzada</span>
+            </div>
+          </div>
+          <figure class="nv-look__quote">
+            <div>
+              <span class="nv-look__ico"><i class="bi bi-heart"></i></span>
+              <blockquote>“No enviamos simples paquetes; entregamos el latido de dos personas que se extrañan.”</blockquote>
+            </div>
+            <figcaption><b>María &amp; Mateo</b><span>Fundadores &amp; Directores Creativos</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timoteo Club -->
+    <section class="nv-club">
+      <div class="nv-club__card">
+        <div class="nv-club__glow" aria-hidden="true"></div>
+        <div class="nv-club__inner">
+          <div class="nv-club__pill"><i class="bi bi-envelope"></i><span>Acceso Privado • Timoteo Club</span></div>
+          <h2>Sé el primero en conocer los nuevos lanzamientos</h2>
+          <p>Recibe en tu correo las aperturas de temporada, preventas secretas de San Valentín y Día de la Madre, más un <strong>10% de descuento de bienvenida</strong> para tu próximo regalo especial.</p>
+          <form class="nv-club__form" id="nv-club-form" novalidate>
+            <div class="nv-club__field">
+              <span><i class="bi bi-at"></i></span>
+              <label class="visually-hidden" for="nv-club-email">Correo electrónico</label>
+              <input id="nv-club-email" type="email" placeholder="Escribe tu correo electrónico..." autocomplete="email" required>
+            </div>
+            <button type="submit">Quiero Unirme</button>
+          </form>
+          <p class="nv-club__error" id="nv-club-error" role="alert" hidden>Escribe un correo válido para unirte al club.</p>
+          <div class="nv-club__ok" id="nv-club-ok" role="status" hidden>
+            <div><i class="bi bi-check-circle"></i><span>¡Bienvenido a la familia Timoteo!</span></div>
+            <p>Revisa tu bandeja de entrada: te hemos enviado tu código especial del 10% de descuento. ♥</p>
+          </div>
+          <small>Sin spam. Solo historias hermosas, fragancias nuevas y recordatorios con cariño.</small>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+  <div id="bottom-nav"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/components/icons.js"></script>
+  <script src="js/data/products.js"></script>
+  <script src="js/data/categories.js"></script>
+  <script src="js/services/productService.js"></script>
+  <script src="js/services/categoryService.js"></script>
+  <script src="js/services/cartService.js"></script>
+  <script src="js/services/favoritesService.js"></script>
+  <script src="js/components/productCard.js"></script>
+  <script src="js/components/categoryCard.js"></script>
+  <script src="js/components/toast.js"></script>
+  <script src="js/components/cartBadge.js"></script>
+  <script src="js/components/navbar.js"></script>
+  <script src="js/components/mobileNavigation.js"></script>
+  <script src="js/components/footer.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/pages/novelties.js"></script>
+</body>
+</html>

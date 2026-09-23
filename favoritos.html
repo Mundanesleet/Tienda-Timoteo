@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Mis favoritos | Timoteo</title>
+  <meta name="description" content="Los regalos que hicieron latir tu corazón, guardados para esa fecha especial.">
+  <meta name="theme-color" content="#FFF8F6">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages-atelier.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="favoritos" data-chrome="atelier" data-nav="home">
+  <a class="skip-link" href="#main-content">Saltar al contenido</a>
+  <header id="site-header"></header>
+
+  <main id="main-content" class="fv-page">
+
+    <section class="fv-hero container-atelier">
+      <nav class="fv-crumb" aria-label="Ruta de exploración"><a href="index.html">Inicio</a><span>/</span><b>Mis Favoritos</b></nav>
+      <div class="fv-hero__card">
+        <div class="fv-hero__orb fv-hero__orb--a" aria-hidden="true"></div>
+        <div class="fv-hero__orb fv-hero__orb--b" aria-hidden="true"></div>
+        <div class="fv-hero__top">
+          <div class="fv-hero__copy">
+            <div class="fv-hero__chip"><i class="bi bi-bookmark-heart-fill"></i><span>Lista Personalizada</span></div>
+            <h1>Tus Detalles Guardados <span>♡</span></h1>
+            <p>Los regalos que hicieron latir tu corazón. Guárdalos para esa fecha especial, compártelos con alguien que te conozca bien o conviértelos en sorpresa.</p>
+          </div>
+          <div class="fv-hero__actions">
+            <button type="button" class="fv-btn fv-btn--light" id="btnShareWishlist"><i class="bi bi-share"></i><span>Compartir lista</span></button>
+            <button type="button" class="fv-btn fv-btn--dark" id="btnMoveAllToCart"><i class="bi bi-bag"></i><span>Mover todos a la cesta</span></button>
+          </div>
+        </div>
+        <div class="fv-hero__stats">
+          <div><i class="fv-dot"></i><span><b id="savedCountLabel">0 artículos</b> guardados</span></div>
+          <div><i class="bi bi-truck"></i><span>Despacho prioritario disponible</span></div>
+          <div><i class="bi bi-gift"></i><span>Tarjeta caligrafiada de regalo incluida</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="fv-filters container-atelier" id="fv-filters-wrap">
+      <div class="fv-filters__row">
+        <div class="fv-filters__chips" id="fv-filters"></div>
+        <div class="fv-filters__sort"><i class="bi bi-sort-down"></i><span>Recién añadidos</span></div>
+      </div>
+    </section>
+
+    <section class="fv-list container-atelier">
+      <ul class="fv-grid" id="favoritesGrid" role="list"></ul>
+
+      <div class="fv-empty" id="emptyWishlistState" hidden>
+        <div class="fv-empty__inner">
+          <div class="fv-empty__art">
+            <div class="fv-empty__polaroid">
+              <div><img src="assets/images/catalog/osito-ventana.jpg" alt="Osito de peluche junto a una ventana"></div>
+              <p>"Un corazón lleno de detalles por regalar"</p>
+            </div>
+            <span class="fv-empty__heart"><i class="bi bi-heart"></i></span>
+          </div>
+          <span class="fv-empty__pill">Tu rincón especial está en blanco</span>
+          <h2>Tu lista de deseos espera por momentos inolvidables</h2>
+          <p>Explora nuestro catálogo artesanal, arreglos con flores de temporada o delicias belgas y presiona el corazón en cada detalle que haga latir tu corazón.</p>
+          <div class="fv-empty__ctas">
+            <a class="fv-btn fv-btn--dark" href="catalogo.html"><i class="bi bi-compass"></i><span>Explorar catálogo de regalos</span></a>
+            <a class="fv-btn fv-btn--light" href="personalizar.html"><span>Crea tu regalo único</span><i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="fv-inspo container-atelier">
+      <div class="fv-inspo__grid">
+        <div class="fv-inspo__dark">
+          <div class="fv-inspo__glow" aria-hidden="true"></div>
+          <div>
+            <div class="fv-inspo__eyebrow"><i class="bi bi-stars"></i><span>Inspiración Timoteo</span></div>
+            <h2>¿Preparando una ocasión única?</h2>
+            <p>Podemos personalizar cada empaque con caligrafía hecha a mano, lazo de seda al tono de tu elección y notas perfumadas que se guardan para siempre.</p>
+            <div class="fv-inspo__steps">
+              <div><em>01.</em><b>Cumpleaños</b></div>
+              <div><em>02.</em><b>Aniversarios</b></div>
+              <div><em>03.</em><b>Para Sorprender</b></div>
+            </div>
+          </div>
+          <div class="fv-inspo__foot">
+            <span>"Hay regalos que dicen todo ♡"</span>
+            <a href="personalizar.html"><span>Diseña tu caja personalizada</span><i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="fv-inspo__photo">
+          <div class="fv-inspo__polaroid">
+            <div><img src="assets/images/editorial/florista-lazo.jpg" alt="Florista envolviendo un bouquet artesanal"></div>
+            <div class="fv-inspo__cap"><div><p>Taller de Autor</p><p>Cada lazo hecho a mano con cariño</p></div><span><i class="bi bi-heart-fill"></i></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="fv-perks container-atelier">
+      <div class="fv-perks__grid">
+        <div><span><i class="bi bi-truck"></i></span><div><h4>Envíos Cuidados</h4><p>Embalaje reforzado y control térmico para flores frescas.</p></div></div>
+        <div><span><i class="bi bi-award"></i></span><div><h4>Garantía de Emoción</h4><p>Si no enamora al abrirlo, te reponemos el arreglo sin costo.</p></div></div>
+        <div><span><i class="bi bi-pen"></i></span><div><h4>Mensaje Caligrafiado</h4><p>Transcribimos tu mensaje a pluma en papel de algodón de 300g.</p></div></div>
+        <div><span><i class="bi bi-headset"></i></span><div><h4>Asesoría por WhatsApp</h4><p>Te acompañamos a elegir el regalo ideal paso a paso.</p></div></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+  <div id="bottom-nav"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/components/icons.js"></script>
+  <script src="js/data/products.js"></script>
+  <script src="js/data/categories.js"></script>
+  <script src="js/services/productService.js"></script>
+  <script src="js/services/categoryService.js"></script>
+  <script src="js/services/cartService.js"></script>
+  <script src="js/services/favoritesService.js"></script>
+  <script src="js/components/productCard.js"></script>
+  <script src="js/components/categoryCard.js"></script>
+  <script src="js/components/toast.js"></script>
+  <script src="js/components/cartBadge.js"></script>
+  <script src="js/components/navbar.js"></script>
+  <script src="js/components/mobileNavigation.js"></script>
+  <script src="js/components/footer.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/pages/favorites.js"></script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+/* ==========================================================================
+   Responsive — mobile first. Puntos de corte de Stitch (Tailwind):
+   sm 640 · md 768 · lg 1024 · xl 1280
+   ========================================================================== */
+
+/* ------------------------------------------------------------------ sm ≥640 */
+@media (min-width: 640px) {
+  .hp__brand-name { display: inline-block; }
+  .fb__legal { flex-direction: row; }
+}
+
+/* ------------------------------------------------------------------ md ≥768 */
+@media (min-width: 768px) {
+  /* Cabeceras de escritorio (boutique y atelier) */
+  .site-header--boutique .site-header__desktop,
+  .site-header--atelier .site-header__desktop { display: block; }
+  .site-header--boutique .site-header__mobile,
+  .site-header--atelier .site-header__mobile { display: none; }
+
+  .bottom-nav { display: none; }
+  body.has-bottom-nav { padding-bottom: 0; }
+  .toast-stack { left: auto; right: 24px; bottom: 24px; transform: none; }
+
+  .ha__nav { display: block; }
+
+  /* Footers */
+  .fb__grid { grid-template-columns: repeat(2, 1fr); }
+  .fa__grid { grid-template-columns: repeat(2, 1fr); }
+  .fa__legal { flex-direction: row; }
+  .fp__grid { grid-template-columns: repeat(2, 1fr); }
+  .hp__search { display: flex; }
+}
+
+/* ------------------------------------------------------------------ lg ≥1024 */
+@media (min-width: 1024px) {
+  .hb { padding: 1.5rem 3rem 1rem; }
+  .hb__actions { gap: 1.5rem; }
+  .hb__nav ul { gap: 3rem; }
+  .ha__tagline { display: flex; }
+  .hp__inner { padding: 0 3rem; }
+  .hp__actions { gap: 0.75rem; }
+  .hp__search { width: 14rem; }
+
+  .fb { padding: 0 3rem; }
+  .fb__grid { grid-template-columns: repeat(12, 1fr); gap: 2rem; }
+  .fb__brand { grid-column: span 4; }
+  .fb__col--sm { grid-column: span 2; }
+  .fb__col--follow { grid-column: span 4; }
+
+  .fa__grid { grid-template-columns: repeat(4, 1fr); }
+  .fp { padding: 0 3rem; }
+  .fp__grid { grid-template-columns: repeat(5, 1fr); }
+  .fp__brandcol { grid-column: span 2; }
+}
+
+/* ------------------------------------------------------------------ xl ≥1280 */
+@media (min-width: 1280px) {
+  /* El header "app-bar" del diseño solo muestra la navegación en xl */
+  .site-header--appbar .site-header__desktop { display: block; }
+  .site-header--appbar .site-header__mobile { display: none; }
+  .hp__nav { display: block; }
+}
+
+/* ==========================================================================
+   HOME
+   ========================================================================== */
+@media (max-width: 767.98px) {
+  .site-footer { display: none; }
+}
+
+@media (min-width: 640px) {
+  .hero__title { font-size: 60px; line-height: 1; }
+  .hero__lead { font-size: 20px; line-height: 28px; }
+  .hero__card { padding: 1.75rem; }
+  .stamp { right: 2.5rem; width: 7rem; height: 7rem; }
+  .note-card { bottom: 2rem; left: 2.5rem; }
+  .note-card p { font-size: 24px; }
+  .cats__grid { grid-template-columns: repeat(4, 1fr); }
+  .cat-pill { padding: 1rem; }
+  .cat-pill__label { font-size: 14px; line-height: 20px; }
+  .cat-pill--all .cat-pill__label { font-size: 12px; line-height: 1.25; }
+  .trio__card--craft { padding: 3rem; }
+  .trio__craft-copy h2 { font-size: 36px; line-height: 40px; }
+  .trio__craft-copy p { font-size: 16px; line-height: 24px; }
+  .btn-craft { font-size: 14px; line-height: 20px; }
+  .trio__card--story { padding: 2rem; }
+  .trio__story-copy h3 { font-size: 30px; line-height: 36px; }
+  .trio__story-copy p { font-size: 14px; line-height: 20px; }
+  .featured__head { flex-direction: row; align-items: flex-end; }
+  .featured__head h2 { font-size: 36px; line-height: 40px; }
+  .featured__grid { grid-template-columns: repeat(2, 1fr); }
+  .occasions__dark { padding: 3rem; }
+  .occasions__list-col h2 { font-size: 36px; line-height: 40px; }
+  .occasions__list { font-size: 14px; line-height: 20px; }
+  .occasions__photo { width: 18rem; }
+  .shipping { padding: 2.5rem; }
+  .shipping__list { font-size: 14px; line-height: 20px; }
+  .callout__card { padding: 2rem; }
+  .callout h3 { font-size: 24px; line-height: 32px; }
+  .callout__left p { font-size: 20px; }
+  .btn-primary-pill--block { font-size: 14px; line-height: 20px; }
+  .btn-white-pill { font-size: 14px; line-height: 20px; }
+}
+
+@media (min-width: 768px) {
+  .home-desktop { display: block; }
+  .home-mobile { display: none; }
+  .cats__grid { grid-template-columns: repeat(7, 1fr); }
+  .occasions__dark { flex-direction: row; }
+  .occasions__list-col, .occasions__photo-col { width: 50%; }
+  .callout__card { flex-direction: row; }
+}
+
+@media (min-width: 1024px) {
+  .container-brand { padding-inline: 3rem; }
+  .hero { padding: 3.5rem 0 6rem; }
+  .hero__grid { grid-template-columns: repeat(12, 1fr); }
+  .hero__copy { grid-column: span 5; }
+  .hero__visual { grid-column: span 7; }
+  .trio { padding: 5rem 0; }
+  .trio__grid { grid-template-columns: repeat(12, 1fr); }
+  .trio__card--craft { grid-column: span 6; }
+  .trio__polaroid-wrap { grid-column: span 3; }
+  .trio__card--story { grid-column: span 3; }
+  .trio__craft-copy h2 { font-size: 48px; line-height: 1; }
+  .featured__grid { grid-template-columns: repeat(4, 1fr); }
+  .occasions__grid { grid-template-columns: repeat(12, 1fr); }
+  .occasions__dark { grid-column: span 8; }
+  .shipping { grid-column: span 4; }
+}
+
+@media (min-width: 1280px) {
+  .hero__title { font-size: 72px; line-height: 1; }
+}
+
+/* ==========================================================================
+   CATÁLOGO
+   ========================================================================== */
+@media (min-width: 640px) {
+  .cr__grid { grid-template-columns: repeat(8, 1fr); gap: 1rem; }
+  .ct__sep { display: inline-block; }
+  .cg__grid { grid-template-columns: repeat(2, 1fr); }
+  .cp__side { flex-direction: row; }
+  .cp__glass, .cp__btn { width: auto; }
+}
+@media (min-width: 768px) {
+  .cat-desktop { display: block; }
+  .cat-mobile { display: none; }
+}
+@media (min-width: 1024px) {
+  .ch { padding-bottom: 4rem; }
+  .ch__card { padding: 3.5rem; }
+  .ch__grid { grid-template-columns: repeat(12, 1fr); }
+  .ch__copy { grid-column: span 8; }
+  .ch__art { grid-column: span 4; justify-content: flex-end; }
+  .ch__seal { left: -1.5rem; }
+  .ct__card { padding: 1.5rem; }
+  .ct__row { grid-template-columns: repeat(12, 1fr); }
+  .ct__search { grid-column: span 7; }
+  .ct__meta { grid-column: span 5; justify-content: flex-end; }
+  .cg__grid { grid-template-columns: repeat(4, 1fr); gap: 1.75rem; }
+  .cp__card { padding: 3rem; }
+  .cp__grid { grid-template-columns: repeat(12, 1fr); }
+  .cp__copy { grid-column: span 8; }
+  .cp__side { grid-column: span 4; flex-direction: column; align-items: flex-end; }
+  .cp__glass { width: 100%; }
+}
+
+/* ==========================================================================
+   DETALLE DE PRODUCTO
+   ========================================================================== */
+@media (min-width: 640px) {
+  .pd-more__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 768px) {
+  .pd-desktop { display: block; }
+  .pd-mobile { display: none; }
+  .pd-care3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .pd-specs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pd-reviews__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .pd-more__head { flex-direction: row; align-items: flex-end; justify-content: space-between; gap: 0; }
+}
+@media (min-width: 1024px) {
+  .pd-grid { grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 4rem; }
+  .pd-gallery { grid-column: span 7; }
+  .pd-info { grid-column: span 5; }
+  .pd-more__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .pd-care__card, .pd-reviews__card { padding: 3rem; }
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Crea tu regalo único | Timoteo</title>
+  <meta name="description" content="Combina bases artesanales, peluches, flores frescas, dulces y una dedicatoria salida del corazón para crear un regalo único.">
+  <meta name="theme-color" content="#FBF6F1">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages-craft.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="personalizar" data-chrome="boutique" data-nav="personalizar">
+  <a class="skip-link" href="#main-content">Saltar al contenido</a>
+  <header id="site-header"></header>
+
+  <main id="main-content" class="cf-page">
+    <section class="cf-wrap container-brand" id="gift-assistant">
+      <div class="cf-intro">
+        <div class="cf-intro__pill"><span class="font-script">Hecho a mano con amor</span><i aria-hidden="true"></i><span>Experiencia Bespoke</span></div>
+        <h1>Crea tu regalo <span>único</span></h1>
+        <p>Combina bases artesanales, peluches entrañables, flores frescas, dulces selectos y una dedicatoria salida del corazón. Cada detalle cuenta una historia inolvidable.</p>
+      </div>
+
+      <nav class="cf-steps" aria-label="Progreso del asistente de regalo">
+        <div class="cf-steps__track"><div class="cf-steps__fill" id="cf-fill"></div></div>
+        <ol id="cf-steps"></ol>
+      </nav>
+
+      <div class="cf-grid">
+        <div class="cf-main" id="cf-main"></div>
+
+        <aside class="cf-aside">
+          <div class="cf-preview">
+            <div class="cf-preview__seal" aria-hidden="true">
+              <svg class="animate-spin-slow" viewBox="0 0 100 100"><path id="sealCraft" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none"/><text font-family="Plus Jakarta Sans, sans-serif" font-size="9" font-weight="700" letter-spacing="2.5" fill="currentColor"><textPath href="#sealCraft">MÁS QUE REGALOS • ES EMOCIÓN •</textPath></text></svg>
+              <span>♡</span>
+            </div>
+            <div class="cf-preview__head">
+              <div><i class="cf-ping" aria-hidden="true"></i><span>Vista previa en tiempo real</span></div>
+              <h3>Tu regalo en construcción</h3>
+            </div>
+            <div class="cf-stage">
+              <div class="cf-stage__inner">
+                <img id="cf-composite" src="assets/images/catalog/caja-sombrerera-osito.jpg" alt="Vista previa de tu regalo personalizado">
+                <div id="cf-hotspots"></div>
+              </div>
+              <div class="cf-stage__note"><p class="font-script">Tu creación está quedando hermosa ♡</p><p>Empaque artesanal garantizado</p></div>
+            </div>
+            <div class="cf-breakdown">
+              <div class="cf-breakdown__head"><span>Desglose de tu diseño</span><b id="cf-ready">0 de 6 listos</b></div>
+              <ul id="cf-lines"></ul>
+              <div class="cf-breakdown__total"><div><span>Subtotal actual:</span><p>Impuestos incluidos • Envío se calcula al final</p></div><strong id="cf-total">$0 COP</strong></div>
+            </div>
+            <p class="cf-photo-note"><i class="bi bi-shield-check"></i><span>Fotografía de tu regalo real enviada a WhatsApp antes del despacho</span></p>
+          </div>
+        </aside>
+      </div>
+
+      <section class="cf-help">
+        <div class="cf-help__glow" aria-hidden="true"></div>
+        <div class="cf-help__grid">
+          <div class="cf-help__copy">
+            <span class="cf-help__pill"><i class="bi bi-stars"></i> Asesoría en Vivo</span>
+            <h2>¿Quieres que un asesor te ayude a redactar la carta o armar tu caja?</h2>
+            <p>Nuestros anfitriones de regalo están disponibles en línea para orientarte con la elección de frases, colores de cinta y detalles que conmueven.</p>
+          </div>
+          <div class="cf-help__side">
+            <a class="cf-help__btn" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp"></i><span>Chatear con un Asesor</span></a>
+            <p class="font-script">"Hay regalos que dicen todo ♡"</p>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+  <div id="bottom-nav"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/components/icons.js"></script>
+  <script src="js/data/products.js"></script>
+  <script src="js/data/categories.js"></script>
+  <script src="js/data/customizer.js"></script>
+  <script src="js/services/productService.js"></script>
+  <script src="js/services/categoryService.js"></script>
+  <script src="js/services/cartService.js"></script>
+  <script src="js/services/favoritesService.js"></script>
+  <script src="js/components/productCard.js"></script>
+  <script src="js/components/categoryCard.js"></script>
+  <script src="js/components/toast.js"></script>
+  <script src="js/components/cartBadge.js"></script>
+  <script src="js/components/navbar.js"></script>
+  <script src="js/components/mobileNavigation.js"></script>
+  <script src="js/components/footer.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/pages/customize.js"></script>
+</body>
+</html>

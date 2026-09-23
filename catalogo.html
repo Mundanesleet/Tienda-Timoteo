@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Catálogo de Detalles | Timoteo</title>
+  <meta name="description" content="Encuentra el regalo perfecto para cada historia y ocasión: peluches, flores, chocolates, relojes y cestas de regalo.">
+  <meta name="theme-color" content="#FBF6F1">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages-catalog.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="catalogo" data-chrome="boutique" data-nav="categorias">
+  <a class="skip-link" href="#main-content">Saltar al contenido</a>
+  <header id="site-header"></header>
+
+  <main id="main-content">
+
+    <!-- ===================================================== ESCRITORIO / TABLET -->
+    <div class="cat-desktop">
+
+      <!-- Cabecera editorial -->
+      <section class="ch">
+        <div class="container-brand ch__wrap">
+          <div class="ch__card">
+            <div class="ch__orb ch__orb--a" aria-hidden="true"></div>
+            <div class="ch__orb ch__orb--b" aria-hidden="true"></div>
+            <div class="ch__grid">
+              <div class="ch__copy">
+                <div class="ch__badge"><i class="bi bi-stars"></i><span>Colección Curada 2025</span></div>
+                <h1>Catálogo de Detalles <br><span>&amp; Emociones</span></h1>
+                <p>Encuentra el regalo perfecto para cada historia y ocasión. Cada caja guarda una emoción inolvidable y un pedacito de cariño sincero.</p>
+                <div class="ch__features">
+                  <div><i class="bi bi-pencil-square"></i><span>Tarjeta con dedicatoria a mano gratis</span></div>
+                  <span class="ch__dot" aria-hidden="true"></span>
+                  <div><i class="bi bi-truck"></i><span>Envíos express el mismo día</span></div>
+                </div>
+              </div>
+              <div class="ch__art">
+                <div class="ch__polaroid">
+                  <div class="ch__polaroid-img"><img src="assets/images/catalog/caja-lazo.jpg" alt="Caja de regalo atada con lazo borgoña"></div>
+                  <p>Detalles que abrazan ♡</p>
+                </div>
+                <div class="ch__seal" aria-hidden="true">
+                  <svg class="animate-spin-slow" viewBox="0 0 100 100"><path id="sealCat" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none"/><text font-family="Plus Jakarta Sans, sans-serif" font-size="9" font-weight="600" letter-spacing="2" fill="currentColor"><textPath href="#sealCat">MÁS QUE REGALOS • ES EMOCIÓN •</textPath></text></svg>
+                  <i class="bi bi-heart-fill"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Explorar por colección -->
+      <section class="cr" id="colecciones">
+        <div class="container-brand">
+          <div class="cr__head">
+            <span>Explorar por Colección</span>
+            <a href="contacto.html#envios">Ver guía de regalos</a>
+          </div>
+          <div class="cr__grid" id="catalog-tabs" role="tablist" aria-label="Colecciones"></div>
+        </div>
+      </section>
+
+      <!-- Barra de búsqueda y filtros -->
+      <section class="ct">
+        <div class="container-brand">
+          <div class="ct__card">
+            <div class="ct__row">
+              <label class="ct__search" for="catalog-search">
+                <i class="bi bi-search"></i>
+                <input id="catalog-search" type="search" placeholder="Buscar peluches, flores, ocasiones..." autocomplete="off">
+                <button type="button" class="ct__tune" data-clear-search aria-label="Limpiar búsqueda"><i class="bi bi-sliders"></i></button>
+              </label>
+              <div class="ct__meta">
+                <p class="ct__count">Mostrando <b data-count>24</b> regalos especiales</p>
+                <div class="ct__sort">
+                  <label class="visually-hidden" for="catalog-sort">Ordenar catálogo</label>
+                  <select id="catalog-sort">
+                    <option value="popular">Más populares</option>
+                    <option value="newest">Novedades</option>
+                    <option value="price-asc">Precio: menor a mayor</option>
+                    <option value="price-desc">Precio: mayor a menor</option>
+                    <option value="rating">Mejor valorados</option>
+                  </select>
+                  <i class="bi bi-chevron-down"></i>
+                </div>
+              </div>
+            </div>
+            <div class="ct__chips" id="catalog-chips">
+              <span class="ct__chips-label">Filtros:</span>
+              <button type="button" class="chip" data-occasion="cumpleanos">Cumpleaños</button>
+              <button type="button" class="chip" data-occasion="aniversario">Aniversario</button>
+              <button type="button" class="chip" data-occasion="amor-amistad">Amor y amistad</button>
+              <button type="button" class="chip" data-occasion="para-mama">Para mamá</button>
+              <span class="ct__sep" aria-hidden="true"></span>
+              <button type="button" class="chip" data-price="30000">$30.000 - $150.000+</button>
+              <button type="button" class="chip" data-recipient="ella">Para ella</button>
+              <button type="button" class="chip" data-recipient="el">Para él</button>
+              <button type="button" class="chip" data-recipient="ninos">Para niños</button>
+              <button type="button" class="ct__clear" data-clear-filters>Limpiar filtros</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Grilla de productos -->
+      <section class="cg">
+        <div class="container-brand">
+          <ul class="cg__grid" id="catalog-grid" role="list"></ul>
+          <p class="cg__empty" id="catalog-empty" hidden>No encontramos detalles con esos filtros. <button type="button" data-clear-filters>Limpiar filtros</button></p>
+          <div class="cg__more" id="catalog-more">
+            <p data-seen>Has visto 8 de 24 detalles diseñados con el corazón</p>
+            <div class="cg__bar"><div data-bar></div></div>
+            <button type="button" class="cg__more-btn" id="load-more-btn"><span>Cargar más regalos hermosos ♡</span><i class="bi bi-arrow-down"></i></button>
+            <p class="cg__quote">"Cada regalo es un puente entre dos almas"</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Compromiso Timoteo -->
+      <section class="cp">
+        <div class="container-brand">
+          <div class="cp__card">
+            <svg class="cp__rings" viewBox="0 0 200 200" fill="none" aria-hidden="true"><circle cx="150" cy="100" r="80" stroke="currentColor" stroke-width="2"/><circle cx="150" cy="100" r="120" stroke="currentColor" stroke-width="2"/><circle cx="150" cy="100" r="160" stroke="currentColor" stroke-width="2"/></svg>
+            <div class="cp__grid">
+              <div class="cp__copy">
+                <div class="cp__eyebrow"><i class="bi bi-patch-check"></i><span>Compromiso Timoteo</span></div>
+                <h2>Envío seguro en empaque de regalo y dedicatoria escrita a mano incluida.</h2>
+                <p>Cuidamos cada cinta, cada tarjeta y cada textura. Tu persona especial sentirá la calidez desde el primer momento en que reciba el paquete en su puerta.</p>
+              </div>
+              <div class="cp__side">
+                <div class="cp__glass"><i class="bi bi-pen"></i><div><p>¿Deseas personalizar tu mensaje?</p><p>Podrás redactarlo al pasar a pagar o por WhatsApp.</p></div></div>
+                <a class="cp__btn" href="personalizar.html"><span>Diseñar un regalo a medida</span><i class="bi bi-magic"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ============================================================= MÓVIL -->
+    <div class="cat-mobile">
+      <div class="cm">
+        <section class="cm__head">
+          <div class="cm__eyebrow"><span><i></i>Colección Exclusiva</span><span><i class="bi bi-stars"></i>Hecho con amor</span></div>
+          <h1>Catálogo de Detalles</h1>
+          <p>"Regalos que abrazan el corazón y crean recuerdos infinitos."</p>
+        </section>
+
+        <section class="cm__cats" aria-label="Categorías">
+          <div class="cm__cats-head"><h2>Explorar Categorías</h2><span>Deslizar →</span></div>
+          <div class="cm__rail" id="catalog-rail"></div>
+        </section>
+
+        <section class="cm__filters">
+          <div class="cm__pills" id="catalog-mpills">
+            <button type="button" class="cm__filter-btn" id="cm-filter-toggle" aria-expanded="false" aria-controls="cm-filter-panel"><i class="bi bi-sliders2"></i><span>Filtros</span><b data-filter-count hidden>0</b></button>
+            <button type="button" class="cm__pill" data-occasion="cumpleanos">Cumpleaños</button>
+            <button type="button" class="cm__pill" data-occasion="aniversario">Aniversario</button>
+            <button type="button" class="cm__pill" data-occasion="amor-amistad"><i class="bi bi-heart-fill"></i>Amor &amp; Amistad</button>
+            <button type="button" class="cm__pill" data-maxprice="100000">Menos de $100k</button>
+          </div>
+          <div class="cm__panel" id="cm-filter-panel" hidden>
+            <div class="cm__panel-row">
+              <button type="button" class="cm__pill" data-occasion="para-mama">Para mamá</button>
+              <button type="button" class="cm__pill" data-occasion="para-amigo">Para un amigo</button>
+              <button type="button" class="cm__pill" data-recipient="ella">Para ella</button>
+              <button type="button" class="cm__pill" data-recipient="el">Para él</button>
+              <button type="button" class="cm__pill" data-recipient="ninos">Para niños</button>
+              <button type="button" class="cm__pill cm__pill--clear" data-clear-filters>Limpiar filtros</button>
+            </div>
+          </div>
+          <div class="cm__count">
+            <span>Mostrando <strong data-count>24 regalos</strong></span>
+            <label class="cm__sort">
+              <span>Ordenar:</span><strong data-sort-label>Más populares</strong><i class="bi bi-chevron-down"></i>
+              <select id="catalog-sort-m" aria-label="Ordenar catálogo">
+                <option value="popular">Más populares</option>
+                <option value="newest">Novedades</option>
+                <option value="price-asc">Precio: menor a mayor</option>
+                <option value="price-desc">Precio: mayor a menor</option>
+                <option value="rating">Mejor valorados</option>
+              </select>
+            </label>
+          </div>
+        </section>
+
+        <ul class="cm__grid" id="catalog-grid-m" role="list"></ul>
+        <p class="cm__empty" id="catalog-empty-m" hidden>No encontramos detalles con esos filtros.</p>
+
+        <div class="cm__more" id="catalog-more-m">
+          <button type="button" class="cm__more-btn" id="load-more-btn-m"><span>Cargar más detalles</span><i class="bi bi-arrow-down"></i></button>
+          <span data-seen-m>Viendo 6 de 24 opciones</span>
+        </div>
+
+        <section class="cm__help">
+          <div class="cm__help-glow" aria-hidden="true"></div>
+          <div class="cm__help-icon"><i class="bi bi-chat-left-text"></i></div>
+          <div class="cm__help-copy">
+            <h4>¿Dudas para elegir?</h4>
+            <p>Habla con una asesora personalizada por WhatsApp para armar el regalo perfecto.</p>
+            <a href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer">Chatear ahora <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </section>
+      </div>
+    </div>
+
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+  <div id="bottom-nav"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/components/icons.js"></script>
+  <script src="js/data/products.js"></script>
+  <script src="js/data/categories.js"></script>
+  <script src="js/services/productService.js"></script>
+  <script src="js/services/categoryService.js"></script>
+  <script src="js/services/cartService.js"></script>
+  <script src="js/services/favoritesService.js"></script>
+  <script src="js/components/productCard.js"></script>
+  <script src="js/components/categoryCard.js"></script>
+  <script src="js/components/toast.js"></script>
+  <script src="js/components/cartBadge.js"></script>
+  <script src="js/components/navbar.js"></script>
+  <script src="js/components/mobileNavigation.js"></script>
+  <script src="js/components/footer.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/pages/catalog.js"></script>
+</body>
+</html>
